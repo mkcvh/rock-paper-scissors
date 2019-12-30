@@ -113,13 +113,16 @@ function startGame() {
 }
 
 function game() {
+    let button = document.getElementById('playAgain');
     if (computerScore + playerScore == 5) {
         if (computerScore > playerScore) {
             alert("You lose the game!");
+            button.style.backgroundColor = 'red';
             endGame();
             return;
         } else {
             alert("You win!");
+            button.style.backgroundColor = 'green';
             endGame();
             return;
         }

@@ -4,21 +4,23 @@ body {
 }
 
 #startGame {
-    height: 300px;
+    height: 200px;
     width: 400px;
     position: relative;
     top: 300px;
     font-size: 72px;
+    border-radius: 30%;
 }
 #buttons {
     visibility: hidden;
-    border-width: 0;
-    border-style: none;
 }
 
 .gameButtons {
     height: 200px;
     width: 200px;
+    border-width: 0;
+    border-style: none;
+    background-color: transparent;
 }
 .icons {
     height: 180px;
@@ -28,5 +30,8 @@ body {
     height: 200px;
     width: 400px;
     font-size: 72px;
+    position: relative;
+    top: -153px;
+    border-radius: 30%;
 }
 
