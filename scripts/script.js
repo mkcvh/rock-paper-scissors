@@ -10,13 +10,53 @@ function computerPlay() {
 }
 
 function computerPlayNotify(playerSelection, computerSelection) {
-   let para = document.createElement('p');
-    let message = document.createTextNode("Computer played: " + computerSelection + 'You played: ' + playerSelection);
-    para.appendChild(message);
-    para.setAttribute('id', 'message');
+   let para1 = document.createElement('p');
+    let message = document.createTextNode("Computer played " + computerSelection + ', you played ' + playerSelection);
+    para1.appendChild(message);
+    para1.setAttribute('id', 'message1');
     let div = document.getElementById('messages');
-    let child = document.getElementById('message');
-    g = div.replaceChild(para, child);
+    let child = document.getElementById('message1');
+    g = div.replaceChild(para1, child);
+}
+
+function scoreNotify() {
+    let para2 = document.createElement('p');
+    let message = document.createTextNode("You: " + playerScore + " Computer: " + computerScore);
+    para2.appendChild(message);
+    para2.setAttribute('id', 'message2');
+    let div = document.getElementById('messages');
+    let child = document.getElementById('message2');
+    g = div.replaceChild(para2, child);
+}
+
+function playerScores() {
+    let para3 = document.createElement('p');
+    let message = document.createTextNode("Nice! Point to you!");
+    para3.appendChild(message);
+    para3.setAttribute('id', 'message3');
+    let div = document.getElementById('messages');
+    let child = document.getElementById('message3');
+    g = div.replaceChild(para3, child);
+}
+
+function computerScores() {
+    let para3 = document.createElement('p');
+    let message = document.createTextNode("Computer's point, loser!");
+    para3.appendChild(message);
+    para3.setAttribute('id', 'message3');
+    let div = document.getElementById('messages');
+    let child = document.getElementById('message3');
+    g = div.replaceChild(para3, child);
+}
+
+function tie() {
+    let para3 = document.createElement('p');
+    let message = document.createTextNode("It's a tie!");
+    para3.appendChild(message);
+    para3.setAttribute('id', 'message3');
+    let div = document.getElementById('messages');
+    let child = document.getElementById('message3');
+    g = div.replaceChild(para3, child);
 }
 
 function cleanUp() {
@@ -46,23 +86,23 @@ function playRound(playerSelection, computerSelection) {
     computerPlayNotify(playerSelection, computerSelection);
     if (playerSelection == computerSelection) {
         console.log("It's a tie!");
-        game();
-        return;
+        tie();
     } 
     // player wins
     else if (((playerSelection == 'rock') && (computerSelection == 'scissors')) || ((playerSelection == 'paper') && (computerSelection == 'rock')) || ((playerSelection == 'scissors') && (computerSelection == 'paper'))) {
         playerScore++;
         console.log(playerSelection + " beats " + computerSelection + "! Point to you!");
-        game();
-        return;
+        playerScores();
     }
     // player loses
     else {
       computerScore++;
       console.log("You lose! " + computerSelection + " beats " + playerSelection);
-        game();
-        return;}
+        computerScores();
     }
+    scoreNotify();
+    game();
+}
 
 function startGame() {
     var buttons = document.getElementById('buttons');
@@ -76,18 +116,29 @@ function game() {
     if (computerScore + playerScore == 5) {
         if (computerScore > playerScore) {
             alert("You lose the game!");
+            endGame();
             return;
         } else {
             alert("You win!");
+            endGame();
             return;
         }
     }
 }
 
+function endGame() {
+    var button = document.getElementById('playAgain');
+    let buttons = document.getElementById('buttons');
+    buttons.style.visibility = "hidden";
+    button.style.visibility = "visible";
+    return;
+}
 
-
-
-
+function initialize() {
+    location.reload();
+    startGame();
+    return;
+}
 
 
 

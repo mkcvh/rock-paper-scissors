@@ -3,6 +3,30 @@ body {
     text-align: center;
 }
 
+#startGame {
+    height: 300px;
+    width: 400px;
+    position: relative;
+    top: 300px;
+    font-size: 72px;
+}
 #buttons {
     visibility: hidden;
+    border-width: 0;
+    border-style: none;
 }
+
+.gameButtons {
+    height: 200px;
+    width: 200px;
+}
+.icons {
+    height: 180px;
+}
+#playAgain {
+    visibility: hidden;
+    height: 200px;
+    width: 400px;
+    font-size: 72px;
+}
+
