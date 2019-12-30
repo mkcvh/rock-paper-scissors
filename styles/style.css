@@ -1,5 +1,5 @@
 body {
-    background-color: lightgrey;
+    background-color: lightgray;
     text-align: center;
 }
 
@@ -7,7 +7,7 @@ body {
     height: 200px;
     width: 400px;
     position: relative;
-    top: 300px;
+    top: 320px;
     font-size: 72px;
     border-radius: 30%;
 }
@@ -20,7 +20,7 @@ body {
     width: 200px;
     border-width: 0;
     border-style: none;
-    background-color: transparent;
+    background-color: lightgrey;
 }
 .icons {
     height: 180px;
@@ -31,7 +31,7 @@ body {
     width: 400px;
     font-size: 72px;
     position: relative;
-    top: -153px;
+    top: -193px;
     border-radius: 30%;
 }
 
