@@ -8,8 +8,8 @@ body {
 #startGame {
     height: 200px;
     width: 700px;
-    position: relative;
-    top: 320px;
+    position: absolute;
+    top: 410px;
     font-size: 72px;
     border-radius: 70px;
     font-family: "Press Start 2P", arial;
@@ -45,9 +45,20 @@ body {
     width: 700px;
     font-size: 72px;
     position: relative;
-    top: -193px;
+    top: 402px;
     border-radius: 70px;;
     font-family: "Press Start 2P", arial;
     cursor: pointer;
 }
 
+.scores {
+    margin-top: 50px;
+}
+
+#roundResult {
+    margin-top: 40px;
+}
+
+.bigButtons {
+    text-align: center;
+}
